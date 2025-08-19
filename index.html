@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS para o estilo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts para uma fonte mais divertida -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Convite Especial | 1º Aninho da Isis</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Animação de confete (opcional, para dar um charme) */
+        .confetti {
+            position: fixed; /* Mudei para fixed para não interferir na rolagem */
+            width: 8px;
+            height: 16px;
+            background: #f00;
+            top: -20px;
+            animation: fall 5s linear infinite;
+            opacity: 0;
+            z-index: 9999; /* Garante que fique por cima */
+        }
+        .confetti:nth-child(2n) { background: #0f0; }
+        .confetti:nth-child(3n) { background: #00f; }
+        .confetti:nth-child(4n) { background: #ff0; }
+        .confetti:nth-child(5n) { background: #f0f; }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-pink-50 text-gray-800 flex justify-center min-h-screen py-8">
+    <!-- Efeitos de confete no fundo -->
+    <div id="confetti-container" class="absolute top-0 left-0 w-full h-full pointer-events-none"></div>
+
+    <div class="w-full max-w-lg mx-auto bg-white rounded-2xl shadow-2xl p-6 sm:p-10 m-4 text-center relative z-10">
+        
+        <!-- Cabeçalho -->
+        <h1 class="text-3xl sm:text-4xl font-bold text-pink-500">Você está convidado!</h1>
+        <p class="text-lg sm:text-xl mt-2">Para a comemoração do meu</p>
+        
+        <!-- NOME DA CRIANÇA -->
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 my-4">
+            1º Aninho!
+        </h2>
+        
+        <!-- IDADE -->
+        <p class="text-2xl font-semibold mb-6">
+             Isis 💖
+        </p>
+
+        <!-- IMAGEM DA CRIANÇA COM O LINK CORRETO -->
+        <div class="my-6">
+            <img src="https://i.imgur.com/g8mJKUX.jpeg" 
+                 alt="Foto da Isis" 
+                 class="mx-auto rounded-full w-36 h-36 object-cover border-4 border-pink-200 shadow-lg">
+        </div>
+
+        <!-- Informações da Festa -->
+        <div class="space-y-4 text-left bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <div class="flex items-start space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <div>
+                    <h3 class="font-semibold">Data e Horário</h3>
+                    <!-- DATA E HORA -->
+                    <p class="text-gray-600">
+                        13 de Setembro de 2025, às 11:00
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <div>
+                    <h3 class="font-semibold">Local</h3>
+                     <!-- ENDEREÇO CORRIGIDO -->
+                    <p class="text-gray-600">
+                        Rua Nossa Senhora da Penha, Quadra 30, Lote 26 - Itaipuaçu, Maricá - RJ
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmação de Presença com Google Forms -->
+        <div class="mt-8">
+            <h3 class="text-xl font-semibold mb-2">Eu vou! 🎉</h3>
+            
+            <!-- NOVO BLOCO DE TEXTO ADICIONADO -->
+            <div class="text-left text-sm text-gray-700 bg-rose-50 border-l-4 border-rose-300 p-4 rounded-r-lg mb-4">
+                <p class="font-semibold mb-2">Prepare-se para viver um dia mágico e cheio de aventuras!</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Use roupas confortáveis para brincar bastante.</li>
+                    <li>A piscina do reino estará aberta para os pequenos cavaleiros e princesas, sempre acompanhados pelos pais.</li>
+                    <li>Para os menores, boia é item obrigatório!</li>
+                </ul>
+            </div>
+            
+            <!-- DATA DE CONFIRMAÇÃO ATUALIZADA -->
+            <p class="text-gray-600 mb-4">Por favor, confirme sua presença até o dia <strong>05/09</strong> para nos ajudar na organização.</p>
+            
+            <!-- BOTÃO COM O LINK DO GOOGLE FORMS INSERIDO -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScaam5Q4mTG7G78uIRcIIODlMiy4BgwvTHseFZn6BEsguXiQg/viewform?usp=header" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Confirmar Presença
+            </a>
+        </div>
+
+        <!-- Mapa -->
+        <div class="mt-8">
+            <h3 class="text-xl font-semibold mb-4">Como chegar</h3>
+            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden border-2 border-gray-200">
+                <!-- MAPA FINAL E CORRETO -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.055835269788!2d-42.9863418855925!3d-22.91157998501026!2m3!1f0!2f0!3f0!3m2!1i1024!i768!4f13.1!3m3!1m2!1s0x99881450324831%3A0x296b62725b8423d!2sR.%20Nossa%20Sra.%20da%20Penha%20-%20Praia%20de%20Itaipua%C3%A7u%2C%20Maric%C3%A1%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1663900000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Script para gerar confetes (opcional)
+        const confettiContainer = document.getElementById('confetti-container');
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDelay = Math.random() * 5 + 's';
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            confettiContainer.appendChild(confetti);
+        }
+    </script>
+
+</body>
+</html>
